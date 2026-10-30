@@ -1,0 +1,30 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Explicit text files
+*.php text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+*.xml text
+*.stub text
+
+# Binary files
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+
+# Exclude dev files and docs from Composer release archives
+/.github            export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/.phpunit.cache     export-ignore
+/docs               export-ignore
+/package.json       export-ignore
+/package-lock.json  export-ignore
+/phpunit.xml        export-ignore
+/tests              export-ignore
+/Torob-Sync         export-ignore
