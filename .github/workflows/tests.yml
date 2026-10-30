@@ -18,19 +18,13 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         php: ['8.2', '8.3', '8.4']
-        laravel: ['10.*', '11.*', '12.*']
+        laravel: ['11.*', '12.*']
         dependency-version: [prefer-stable]
         include:
-          - laravel: 10.*
-            testbench: 8.*
           - laravel: 11.*
             testbench: 9.*
           - laravel: 12.*
             testbench: 10.*
-        exclude:
-          # Laravel 10 does not officially support PHP 8.4
-          - php: '8.4'
-            laravel: 10.*
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.os }}
 

@@ -56,9 +56,7 @@ return new class extends Migration
 
 ## Capturing Click ID
 
-Add the `CaptureTorobClid` middleware to your application's `web` middleware group:
-
-### Laravel 11, 12 & 13 (`bootstrap/app.php`):
+Add the `CaptureTorobClid` middleware to your application's `web` middleware group in `bootstrap/app.php`:
 
 ```php
 use Torob\Laravel\Http\Middleware\CaptureTorobClid;
@@ -70,17 +68,6 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
     })
     // ...
-```
-
-### Laravel 10 (`app/Http/Kernel.php`):
-
-```php
-protected $middlewareGroups = [
-    'web' => [
-        // ...
-        \Torob\Laravel\Http\Middleware\CaptureTorobClid::class,
-    ],
-];
 ```
 
 The middleware automatically checks for `?torob_clid=` in the query string and stores it in an HTTP-only cookie lasting 7 days (10,080 minutes).

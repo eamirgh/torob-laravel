@@ -20,7 +20,7 @@ A Laravel package for integrating with **Torob's Product and Order Sync systems*
 
 - PHP `^8.2` (including PHP 8.3 & 8.4)
 - Extensions: `ext-sodium`, `ext-json` (built into PHP)
-- Laravel `^10.0`, `^11.0`, `^12.0`, or `^13.0`
+- Laravel `^11.0`, `^12.0`, or `^13.0`
 
 ---
 
@@ -282,7 +282,7 @@ Schema::table('orders', function (Blueprint $table) {
 });
 ```
 
-Add the middleware to your `web` middleware group in `bootstrap/app.php` (Laravel 11/12/13) or `app/Http/Kernel.php` (Laravel 10):
+Add the middleware to your `web` middleware group in `bootstrap/app.php`:
 
 ```php
 $middleware->web(append: [

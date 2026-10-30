@@ -4,7 +4,7 @@
 
 - **PHP**: `^8.2` (including 8.3 and 8.4)
 - **Extensions**: `ext-sodium` and `ext-json` (built into PHP)
-- **Laravel Framework**: `^10.0`, `^11.0`, `^12.0`, or `^13.0`
+- **Laravel Framework**: `^11.0`, `^12.0`, or `^13.0`
 
 ## Installation
 
